@@ -53,7 +53,7 @@ const Explore = () => {
   }, [])
   return (
     <div id='discover' className='my-20'>
-      <div>
+      <div data-aos='fade-right'>
         <p className='text-4xl max-w-sm font-semibold'>
           Explore place around the world
         </p>
@@ -73,11 +73,15 @@ const Explore = () => {
             return (
               <SwiperSlide>
                 <img
+                  data-aos='fade-left'
                   key={index}
                   src={item.img}
                   className='md:aspect-[3/4] aspect-square hover:opacity-70 cursor-pointer relative object-cover'
                 />
-                <h1 className='absolute text-left md:px-5 px-3 font-medium md:text-4xl text-lg bottom-4 w-full left-auto'>
+                <h1
+                  data-aos='fade-up'
+                  className='absolute text-left md:px-5 px-3 font-medium md:text-4xl text-lg bottom-4 w-full left-auto'
+                >
                   Perfect place for adventure
                 </h1>
               </SwiperSlide>
@@ -86,19 +90,25 @@ const Explore = () => {
         </Swiper>
       </div>
       <div className='my-20'>
-        <div className='max-w-sm  mx-auto'>
+        <div data-aos='fade-up' className='max-w-sm  mx-auto'>
           <h1 className='md:text-4xl text-2xl text-center'>
             What can we offer for you
           </h1>
         </div>
-        <div className='grid md:grid-cols-3 items-center gap-10 mt-7 '>
-          {info.map(item=>{
+        <div
+          data-aos='fade-up'
+          className='grid md:grid-cols-3 items-center gap-10 mt-7 '
+        >
+          {info.map((item) => {
             return (
               <article className='rounded-2xl aspect-auto bg-[#111] py-5 px-10'>
                 <h1 className='text-4xl text-orange-600 font-semibold '>
                   {item.title}
                 </h1>
-                <p className='mt-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid exercitationem deserunt cumque reiciendis.</p>
+                <p className='mt-5'>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aliquid exercitationem deserunt cumque reiciendis.
+                </p>
               </article>
             )
           })}

@@ -1,7 +1,7 @@
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 const Footer = () => {
   return (
-    <footer className='my-20 w-[90vw] md:w-[80vw] mx-auto'>
+    <footer data-aos='fade-up' className='my-20 w-[90vw] md:w-[80vw] mx-auto'>
       <div className='grid grid-cols-2 md:grid-cols-5 gap-x-4 gap-y-10 items-start'>
         <div>
           <h1>
@@ -77,7 +77,8 @@ const Footer = () => {
       </div>
       <div className='text-center mt-20'>
         <p>
-          © {new Date().getFullYear()} Travel. All rights reserved | Made with {'Mandip Tamang '}
+          © {new Date().getFullYear()} Travel. All rights reserved | Made with{' '}
+          {'Mandip Tamang '}
         </p>
       </div>
     </footer>

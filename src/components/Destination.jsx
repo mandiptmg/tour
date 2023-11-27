@@ -21,40 +21,44 @@ const Destination = () => {
   return (
     <div className='my-20'>
       <div className='flex items-end mb-10 justify-between'>
-        <h1 className='text-4xl font-semibold'>
+        <h1 data-aos='fade-right' className='text-4xl font-semibold'>
           We provide top <span className='block'>Destination</span>
         </h1>
         <button
+          data-aos='fade-left'
           onClick={() => setVisit(!visit)}
           className='capitalize p-1 text-sm bg-orange-600'
         >
           visit {visit ? 'none' : 'all'}
         </button>
       </div>
-      <div className='grid md:grid-cols-3 items-center gap-4'>
+      <div
+       
+        className='grid md:grid-cols-3 items-center gap-4'
+      >
         {visit
-          ? data
-              .map((item) => {
-                return (
-                  <article className='w-ful h-full hover:opacity-50 cursor-pointer'>
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className='aspect-[1/1.2] object-cover'
-                    />
-                    <h2 className='text-2xl mt-1 font-medium'>{item.title}</h2>
-                    <p className='text-lg font-medium text-orange-600'>
-                      ${item.price}
-                    </p>
-                  </article>
-                )
-              })
-             
+          ? data.map((item) => {
+              return (
+                <article className='w-ful h-full hover:opacity-50 cursor-pointer'>
+                  <img
+                    data-aos='fade-up'
+                    src={item.img}
+                    alt={item.title}
+                    className='aspect-[1/1.2] object-cover'
+                  />
+                  <h2 className='text-2xl mt-1 font-medium'>{item.title}</h2>
+                  <p className='text-lg font-medium text-orange-600'>
+                    ${item.price}
+                  </p>
+                </article>
+              )
+            })
           : data
               .map((item) => {
                 return (
                   <article className='w-ful h-full hover:opacity-50 cursor-pointer'>
                     <img
+                      data-aos='fade-up'
                       src={item.img}
                       alt={item.title}
                       className='md:aspect-[1/1.2] object-cover aspect-square'

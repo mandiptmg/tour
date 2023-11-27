@@ -1,7 +1,9 @@
+import { useGlobalContext } from "../../context/context"
 
 const Header = () => {
+  const {headerRef} = useGlobalContext();
   return (
-    <div className=''>
+    <div data-aos='fade-down' ref={headerRef}>
       <nav className='flex h-20 justify-between items-center'>
         <div>
           <a href='#home' className='text-2xl  font-semibold'>
